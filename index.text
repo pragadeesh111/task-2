@@ -1,0 +1,47 @@
+Window Vs Document
+Window object :
+ It is the top most object and outermost element of the object hierarchy.
+
+Document object :
+ Each HTML document that gets loaded into a window becomes a document object.
+ The document contains the contents of the page.
+ Using document object, JavaScript can modify
+ add and delete the HTML elements, attributes CSS styles in the page
+
+ codekata:
+ Write a code to get the input in the given format and print the output in the given format
+
+Input Description:
+Three integers are given in line by line.
+
+Output Description:
+Print the integers in a single line separate by space. 
+
+Sample Input :
+2
+4
+5
+Sample Output :
+2 4 5
+
+code:
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+
+  console.log(userInput[0],userInput[1],userInput[2]);
+
+  //end-here
+});
